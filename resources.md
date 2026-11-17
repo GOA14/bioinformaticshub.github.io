@@ -34,10 +34,11 @@ and open a pull request.
 - [Rosalind](https://rosalind.info/) &mdash; bioinformatics by problem solving.
 
 ## African and Nigerian networks
-
+- [African Bioinformatics Institute (ABI)](https://bioinformaticsinstitute.africa/) &mdash; continent-wide network building bioinformatics research, training and infrastructure across Africa.
 - [H3ABioNet](https://www.h3abionet.org/) &mdash; pan-African bioinformatics network, accredited training and node support.
 - [ASBCB](https://www.asbcb.org/) &mdash; African Society for Bioinformatics and Computational Biology.
 - [Science Communication Hub Nigeria](https://scicomnigeria.org/) &mdash; mentorship and science communication.
+- [Open Science Community Network (OSCN)](https://www.oscnetwork.org/) &mdash; African-led open science network, founded in Nigeria in 2022 and part of INOSC.
 - [AfricArXiv](https://info.africarxiv.org/) &mdash; preprint service for African scientists.
 
 ## Compute and data
