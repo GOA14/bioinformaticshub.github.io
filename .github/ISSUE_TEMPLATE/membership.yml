@@ -1,0 +1,113 @@
+name: Join the Bioinformatics Hub
+description: Add yourself to the members page, or update the details already there.
+title: "[Membership]: "
+labels: ["membership"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in and a bot will open a pull request that adds you to
+        `_data/members.yml`. Your GitHub username and profile photo are taken from the
+        account you are posting with, so there is nothing to upload.
+
+        Submitting the form again later **updates** your existing entry.
+        Everything except the first three questions is optional &mdash; leave a field
+        blank and it simply will not be shown.
+  - type: input
+    id: name
+    attributes:
+      label: Full name
+      description: As you would like it displayed on the site.
+      placeholder: Amina Bello
+    validations:
+      required: true
+  - type: input
+    id: institution
+    attributes:
+      label: Institution
+      description: University, research institute, company, or "Independent".
+      placeholder: Bayero University, Kano
+    validations:
+      required: true
+  - type: input
+    id: interests
+    attributes:
+      label: Interests
+      description: Comma-separated. Research areas, techniques, languages you use or want to learn.
+      placeholder: RNA-Seq, metagenomics, AMR surveillance, R
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Role or title
+      placeholder: PhD student / Lecturer / Research assistant
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: Kano, Nigeria
+  - type: input
+    id: email
+    attributes:
+      label: Public email address
+      description: Shown on your card. Leave blank if you would rather not publish it.
+      placeholder: you@example.edu.ng
+  - type: input
+    id: website
+    attributes:
+      label: Website
+      description: Full URL, including https://
+      placeholder: https://example.org/~you
+  - type: input
+    id: orcid
+    attributes:
+      label: ORCID iD
+      description: Digits only, e.g. 0000-0002-1825-0097
+      placeholder: 0000-0002-1825-0097
+  - type: input
+    id: twitter
+    attributes:
+      label: X / Twitter handle
+      description: Without the @
+      placeholder: yourhandle
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn
+      description: Just the part after /in/
+      placeholder: your-name-123
+  - type: input
+    id: bluesky
+    attributes:
+      label: Bluesky handle
+      placeholder: you.bsky.social
+  - type: input
+    id: mastodon
+    attributes:
+      label: Mastodon profile URL
+      placeholder: https://mstdn.science/@you
+  - type: dropdown
+    id: newcomer
+    attributes:
+      label: How would you describe yourself?
+      description: Only used to help us plan training. Not published.
+      options:
+        - New to bioinformatics
+        - Some experience
+        - Experienced bioinformatician
+        - Prefer not to say
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I have read and agree to follow the Bioinformatics Hub Code of Conduct.
+          required: true
+  - type: checkboxes
+    id: publish
+    attributes:
+      label: Publishing
+      options:
+        - label: I am happy for the details above to appear on the public members page.
+          required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Bioinformatics Hub on Slack
+    url: https://bioinformaticshub.slack.com
+    about: Day-to-day questions and discussion happen here, not in the issue tracker.
+  - name: Code of Conduct
+    url: https://bioinformaticshub.github.io/code-of-conduct/
+    about: Report conduct concerns privately to the steering committee, not in a public issue.

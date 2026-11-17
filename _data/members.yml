@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------
+# Bioinformatics Hub members
+# ---------------------------------------------------------------------------
+# This file is the single source of truth for the /members/ page.
+#
+# TWO WAYS TO BE LISTED HERE
+#   1. Open a "Join the Bioinformatics Hub" issue:
+#      https://github.com/bioinformaticshub/bioinformaticshub.github.io/issues/new?template=membership.yml
+#      A bot turns your answers into a pull request against this file.
+#   2. Edit this file yourself and open a pull request.
+#
+# FIELDS
+#   name        (required)  Full name, as you would like it displayed.
+#   github      (required)  GitHub username, no @. Used for your avatar.
+#   institution (required)  University, institute, company or "Independent".
+#   interests   (required)  Comma-separated research / technical interests.
+#   team        (optional)  "steering" for the steering committee, otherwise omit.
+#   role        (optional)  Title shown under your name, e.g. "PhD student".
+#   location    (optional)  City, State.
+#   email       (optional)  Public contact address. Leave blank to hide it.
+#   website     (optional)  Full URL including https://
+#   orcid       (optional)  Bare ORCID iD, e.g. 0000-0002-1825-0097
+#   twitter     (optional)  Handle without @
+#   linkedin    (optional)  Handle or vanity path without the URL
+#   bluesky     (optional)  Full handle, e.g. you.bsky.social
+#   mastodon    (optional)  Full URL to your profile
+#   joined      (optional)  YYYY-MM-DD
+#
+# Entries are kept sorted by surname within each group. Keep the field order
+# above so that diffs stay readable.
+# ---------------------------------------------------------------------------
+
+- name: Umar Ahmad
+  github: babasaraki
+  institution: BioSeq / Science Communication Hub Nigeria
+  interests: Cancer genomics, transcriptomics, oncolytic virotherapy, NGS data analysis, training
+  team: steering
+  role: Founder and Coordinator
+  location: Nigeria
+  twitter: babasaraki1
+  joined: 2016-01-01
+
+# --- Copy the block below, fill it in, and delete the leading "# " ----------
+# - name: Your Name
+#   github: your-github-username
+#   institution: Your University or Institute
+#   interests: RNA-Seq, metagenomics, R
+#   role: PhD student
+#   location: Kano, Nigeria
+#   website: https://example.org
+#   orcid: 0000-0002-1825-0097
+#   joined: 2026-01-01

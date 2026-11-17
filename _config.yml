@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------
+# Bioinformatics Hub -- Jekyll configuration
+# ---------------------------------------------------------------------------
+title: Bioinformatics Hub
+tagline: The bioinformatics community for scientists and researchers in Nigeria
+description: >-
+  Bioinformatics Hub is an open community of scientists, students and
+  researchers in Nigeria who use and teach bioinformatics, genomics and
+  computational biology. We run a Slack workspace, share training material and
+  opportunities, and welcome newcomers to the field.
+
+# --- URLs -------------------------------------------------------------------
+# Organisation site served at the root of the domain.
+url: "https://bioinformaticshub.github.io"
+baseurl: ""
+# If you instead publish from babasaraki/bioinformaticshub as a project page,
+# set:  url: "https://babasaraki.github.io"  and  baseurl: "/bioinformaticshub"
+
+# --- Community links --------------------------------------------------------
+org: bioinformaticshub
+repository: bioinformaticshub/bioinformaticshub.github.io
+slack: "https://bioinformaticshub.slack.com"
+slack_invite: "https://bioinformaticshub.slack.com"   # replace with a Slack invite link
+twitter_username: babasaraki1
+email: ""                                             # community contact address
+founded: 2016
+logo: /assets/img/logo.svg
+image: /assets/img/social-card.png
+
+# --- Build ------------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /blog/:year/:month/:title/
+timezone: Africa/Lagos
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections:
+  events:
+    output: true
+    permalink: /events/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CONTRIBUTING.md
+  - scripts/
+  - vendor/
+  - .github/

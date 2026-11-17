@@ -1,0 +1,48 @@
+name: Propose an event
+description: Suggest a meetup, workshop, journal club or training session.
+title: "[Event]: "
+labels: ["event"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Event title
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Proposed date
+      placeholder: 2026-03-14
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      placeholder: Online / Bayero University, Kano
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options:
+        - Online meetup
+        - In-person meetup
+        - Hands-on workshop
+        - Journal club
+        - Hackathon
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What is it about?
+      description: A paragraph we can put on the events page.
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Who is hosting or organising?

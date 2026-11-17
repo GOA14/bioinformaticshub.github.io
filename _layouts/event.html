@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="wrap prose">
+  <header class="page-head">
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      {% if page.location %} &middot; {{ page.location }}{% endif %}
+      {% if page.format %} &middot; {{ page.format }}{% endif %}
+    </p>
+    {% if page.registration %}
+      <p><a class="btn" href="{{ page.registration }}">Register</a></p>
+    {% endif %}
+  </header>
+  {{ content }}
+
+  {% if page.programme %}
+    <h2>Programme</h2>
+    <table class="programme">
+      <thead><tr><th>Time</th><th>Session</th><th>Speaker</th></tr></thead>
+      <tbody>
+      {% for item in page.programme %}
+        <tr><td>{{ item.time }}</td><td>{{ item.title }}</td><td>{{ item.speaker }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+  <p class="back"><a href="{{ '/events/' | relative_url }}">&larr; All events</a></p>
+</article>

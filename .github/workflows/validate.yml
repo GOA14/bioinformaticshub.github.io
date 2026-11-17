@@ -1,0 +1,42 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  data:
+    name: members.yml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pyyaml
+      - run: python scripts/validate_members.py
+
+  build:
+    name: Jekyll build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - run: bundle exec jekyll build --strict_front_matter
+        env:
+          JEKYLL_ENV: production
+      - name: Check for broken internal links
+        run: |
+          gem install html-proofer --no-document
+          htmlproofer ./_site \
+            --disable-external \
+            --allow-missing-href \
+            --ignore-urls "/^http:\/\/localhost/" || true

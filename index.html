@@ -1,0 +1,138 @@
+---
+layout: home
+title: Home
+---
+<section class="hero">
+  <div class="wrap">
+    <h1>Bioinformatics for Nigeria&rsquo;s research community</h1>
+    <p class="lede">
+      Bioinformatics Hub is an open community of scientists, students and researchers
+      in Nigeria who analyse biological data. We share knowledge on Slack, meet online,
+      point each other at training and opportunities, and welcome people who are
+      completely new to the field.
+    </p>
+    <div class="btn-row">
+      <a class="btn" href="{{ '/join/' | relative_url }}">Join the hub</a>
+      <a class="btn btn-outline" href="{{ site.slack }}">Open Slack workspace</a>
+      <a class="btn btn-outline" href="{{ '/members/' | relative_url }}">Meet the members</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <ul class="grid">
+      <li class="card">
+        <p class="stat">{{ site.data.members | size }}</p>
+        <h3>Listed members</h3>
+        <p>Everyone on the <a href="{{ '/members/' | relative_url }}">members page</a> added
+           themselves through GitHub.</p>
+      </li>
+      <li class="card">
+        <p class="stat">{{ site.data.institutions | size }}</p>
+        <h3>Institutions</h3>
+        <p>Universities, research institutes and agencies whose email domains can
+           join the Slack workspace.</p>
+      </li>
+      <li class="card">
+        <p class="stat">{{ 'now' | date: "%Y" | minus: site.founded }}</p>
+        <h3>Years running</h3>
+        <p>The Slack workspace has been going since {{ site.founded }}. The community site is its new home.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2>What we do</h2>
+    <ul class="grid">
+      <li class="card">
+        <h3>Share knowledge</h3>
+        <p>Basic bioinformatics and NGS, RNA-Seq, ChIP-Seq, metagenomics, single-cell,
+           microarray, pathway and network analysis.</p>
+      </li>
+      <li class="card">
+        <h3>Teach each other to code</h3>
+        <p>Unix command line, R and Bioconductor, Python, workflow managers,
+           statistical computing and data visualisation.</p>
+      </li>
+      <li class="card">
+        <h3>Structure and drug discovery</h3>
+        <p>Molecular docking, drug design, functional and structural prediction,
+           and systems biology.</p>
+      </li>
+      <li class="card">
+        <h3>Ask for help, and give it</h3>
+        <p>No question is too basic. Biologists, medical and biomedical scientists new to
+           bioinformatics are especially welcome.</p>
+      </li>
+      <li class="card">
+        <h3>Circulate opportunities</h3>
+        <p>Conferences, fellowships, studentships, training schools and jobs relevant to
+           bioinformatics in Nigeria and beyond.</p>
+      </li>
+      <li class="card">
+        <h3>Build the community</h3>
+        <p>Introduce yourself, find collaborators, and put your institution on the map
+           of Nigerian bioinformatics.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% assign today = 'now' | date: "%Y-%m-%d" %}
+{% assign upcoming = site.events | where_exp: "e", "e.date >= today" | sort: "date" %}
+<section class="section">
+  <div class="wrap">
+    <h2>Events</h2>
+    {% if upcoming.size > 0 %}
+      <ul class="event-list">
+        {% for e in upcoming limit: 3 %}{% include event-card.html event=e %}{% endfor %}
+      </ul>
+    {% else %}
+      <p>No meeting is scheduled at the moment. Proposals are welcome &mdash;
+         <a href="https://github.com/{{ site.repository }}/issues/new">open an issue</a>
+         if you would like to host one.</p>
+    {% endif %}
+    <p><a href="{{ '/events/' | relative_url }}">All events &rarr;</a></p>
+  </div>
+</section>
+
+{% if site.posts.size > 0 %}
+<section class="section section-alt">
+  <div class="wrap">
+    <h2>From the blog</h2>
+    <ul class="post-list">
+      {% for post in site.posts limit: 3 %}
+        <li>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="meta">{{ post.date | date: "%-d %B %Y" }}{% if post.author %} &middot; {{ post.author }}{% endif %}</p>
+          <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <p><a href="{{ '/blog/' | relative_url }}">All posts &rarr;</a></p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="wrap">
+    <h2>Add yourself in two minutes</h2>
+    <p class="lede">Membership is held in a single file in this repository, so it stays
+       open, portable and yours.</p>
+    <ul class="grid">
+      <li class="card"><h3>1. Fill in the form</h3>
+        <p>Open the <a href="https://github.com/{{ site.repository }}/issues/new?template=membership.yml">membership
+           issue form</a> with any GitHub account.</p></li>
+      <li class="card"><h3>2. A bot opens a pull request</h3>
+        <p>Your answers are added to <code>_data/members.yml</code> automatically, using your
+           GitHub username as the key.</p></li>
+      <li class="card"><h3>3. You appear on the site</h3>
+        <p>Once a maintainer merges, the site rebuilds and your card is live on the
+           members page.</p></li>
+    </ul>
+    <p class="btn-row"><a class="btn btn-primary" href="{{ '/join/' | relative_url }}">How to join</a></p>
+  </div>
+</section>
