@@ -30,14 +30,15 @@
 # above so that diffs stay readable.
 # ---------------------------------------------------------------------------
 
-- name: Umar Ahmad
+  - name: Umar Ahmad
   github: babasaraki
-  institution: BioSeq / Science Communication Hub Nigeria
-  interests: Cancer genomics, transcriptomics, oncolytic virotherapy, NGS data analysis, training
+  institution: Institute of Genomics, Africa CDC
+  interests: Cancer genomics, transcriptomics, pathogen genomics, training and open science
   team: steering
   role: Founder and Coordinator
-  location: Nigeria
-  twitter: babasaraki1
+  location: Addis Ababa, Ethiopia
+  website: https://africacdc.org
+  twitter: babasaraky
   joined: 2016-01-01
 
 # --- Copy the block below, fill it in, and delete the leading "# " ----------
