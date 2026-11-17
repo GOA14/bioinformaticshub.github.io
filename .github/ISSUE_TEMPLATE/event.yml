@@ -4,27 +4,27 @@ title: "[Event]: "
 labels: ["event"]
 body:
   - type: input
-    id: title
+    id: event_title
     attributes:
       label: Event title
     validations:
       required: true
   - type: input
-    id: date
+    id: event_date
     attributes:
       label: Proposed date
       placeholder: 2026-03-14
     validations:
       required: true
   - type: input
-    id: location
+    id: event_location
     attributes:
       label: Location
       placeholder: Online / Bayero University, Kano
     validations:
       required: true
   - type: dropdown
-    id: format
+    id: event_format
     attributes:
       label: Format
       options:
@@ -36,13 +36,13 @@ body:
     validations:
       required: true
   - type: textarea
-    id: summary
+    id: event_summary
     attributes:
       label: What is it about?
       description: A paragraph we can put on the events page.
     validations:
       required: true
   - type: input
-    id: host
+    id: event_host
     attributes:
       label: Who is hosting or organising?

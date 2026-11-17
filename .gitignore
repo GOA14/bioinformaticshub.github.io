@@ -6,3 +6,6 @@ _site/
 vendor/
 Gemfile.lock
 .DS_Store
+
+# local maintainer notes, never published
+MAINTAINERS-SETUP.md
