@@ -9,6 +9,14 @@ This page is community-maintained. If a link helped you, add it: edit
 [`resources.md`](https://github.com/{{ site.repository }}/edit/main/resources.md)
 and open a pull request.
 
+**On this page:**
+[Slack channels](#slack-channels) &middot;
+[Learning the basics](#learning-the-basics) &middot;
+[Training centres worldwide](#training-from-bioinformatics-centres-worldwide) &middot;
+[African and Nigerian networks](#african-and-nigerian-networks) &middot;
+[Services you can hire](#services-you-can-hire) &middot;
+[Compute and data](#compute-and-data)
+
 ## Slack channels
 
 | Channel | What goes there |
@@ -33,6 +41,27 @@ and open a pull request.
 - [Bioconductor course material](https://bioconductor.org/help/course-materials/) &mdash; R workflows for genomics.
 - [Rosalind](https://rosalind.info/) &mdash; bioinformatics by problem solving.
 
+## Training from bioinformatics centres worldwide
+
+Established centres that publish their course material openly. You do not need to attend
+the workshop to use the slides, labs and recordings.
+
+- [Canadian Bioinformatics Workshops](https://bioinformatics.ca/) &mdash; CBW runs advanced
+  workshops and releases past content under a Creative Commons licence; lectures on YouTube
+  and labs on [GitHub](https://bioinformaticsdotca.github.io/). Strong on cancer genomics,
+  RNA-Seq, pathway and network analysis.
+- [EMBL-EBI Training](https://www.ebi.ac.uk/training/) &mdash; free on-demand courses, live
+  webinars and tutorials covering the EBI's databases and general analysis skills.
+- [Babraham Bioinformatics](https://www.bioinformatics.babraham.ac.uk/training.html) &mdash;
+  course material for R and the tidyverse, Python, statistics, NGS quality control, RNA-Seq,
+  10X single-cell, ChIP-Seq and bisulfite methylation analysis. From the group that wrote FastQC.
+- [NCBI Learn](https://www.ncbi.nlm.nih.gov/home/learn/) &mdash; tutorials and recorded
+  webinars for BLAST, SRA, GenBank and the rest of the NCBI toolset.
+- [Australian BioCommons training directory](https://www.biocommons.org.au/other-training)
+  &mdash; curated index of self-paced material, including Melbourne Bioinformatics tutorials.
+- [Biostars](https://www.biostars.org/) &mdash; the long-running bioinformatics Q&A forum.
+  Search it before asking; the answer to most tool errors is already there.
+
 ## African and Nigerian networks
 
 - [African Bioinformatics Institute (ABI)](https://bioinformaticsinstitute.africa/) &mdash; continent-wide network building bioinformatics research, training and infrastructure across Africa.
@@ -54,8 +83,7 @@ community, add it yourself with a pull request.
 - [BioSeq](https://www.bioseqc.com/) &mdash; Abuja. Genomics and bioinformatics: sequencing
   analysis from raw reads to interpretation, transcriptomics, single-cell, variant and
   metagenomic analysis, scientific software, and public and on-site training through BioSeq
-  Academy. *Founded by Umar Ahmad, who also founded this hub &mdash; declared here so you can
-  weigh it accordingly.*
+  Academy. 
 
 ## Compute and data
 
