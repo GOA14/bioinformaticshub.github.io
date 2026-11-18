@@ -52,6 +52,9 @@ the workshop to use the slides, labs and recordings.
   RNA-Seq, pathway and network analysis.
 - [EMBL-EBI Training](https://www.ebi.ac.uk/training/) &mdash; free on-demand courses, live
   webinars and tutorials covering the EBI's databases and general analysis skills.
+- [SIB Training](https://www.sib.swiss/training) &mdash; the Swiss Institute of Bioinformatics'
+  course programme, with teaching material published openly for most courses. Good coverage of
+  protein bioinformatics, structural biology and statistics for biologists.
 - [Babraham Bioinformatics](https://www.bioinformatics.babraham.ac.uk/training.html) &mdash;
   course material for R and the tidyverse, Python, statistics, NGS quality control, RNA-Seq,
   10X single-cell, ChIP-Seq and bisulfite methylation analysis. From the group that wrote FastQC.
@@ -83,11 +86,13 @@ community, add it yourself with a pull request.
 - [BioSeq](https://www.bioseqc.com/) &mdash; Abuja. Genomics and bioinformatics: sequencing
   analysis from raw reads to interpretation, transcriptomics, single-cell, variant and
   metagenomic analysis, scientific software, and public and on-site training through BioSeq
-  Academy. 
-
+  Academy.
+  
 ## Compute and data
 
 - [Galaxy Europe](https://usegalaxy.eu/) and [Galaxy Main](https://usegalaxy.org/) &mdash; free analysis platforms in the browser.
 - [NCBI SRA](https://www.ncbi.nlm.nih.gov/sra) / [ENA](https://www.ebi.ac.uk/ena) &mdash; public sequence archives.
+- [Expasy](https://www.expasy.org/) &mdash; SIB's resource portal: one entry point to 160+ databases
+  and tools, including UniProtKB/Swiss-Prot, SWISS-MODEL, STRING and PROSITE.
 - [Bioconda](https://bioconda.github.io/) and [BioContainers](https://biocontainers.pro/) &mdash; installing tools without fighting dependencies.
 - [nf-core](https://nf-co.re/) &mdash; community-curated Nextflow pipelines.
