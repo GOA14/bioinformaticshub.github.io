@@ -29,6 +29,7 @@
 # Entries are kept sorted by surname within each group. Keep the field order
 # above so that diffs stay readable.
 # ---------------------------------------------------------------------------
+
 - name: Umar Ahmad
   github: babasaraki
   institution: Institute of Genomics, Africa CDC
@@ -39,6 +40,16 @@
   website: https://africacdc.org
   twitter: babasaraky
   joined: 2016-01-01
+
+- name: Sadiq Yusuf
+  github: sadiqy433-dotcom
+  institution: Yobe state university
+  interests: Bioinformatics, molecular biology
+  role: Graduate
+  location: Nguru
+  email: sadiqyusufngu@gmail.com
+  joined: 2026-11-18
+
 # --- Copy the block below, fill it in, and delete the leading "# " ----------
 # - name: Your Name
 #   github: your-github-username
