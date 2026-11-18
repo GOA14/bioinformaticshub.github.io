@@ -29,6 +29,15 @@
 # Entries are kept sorted by surname within each group. Keep the field order
 # above so that diffs stay readable.
 # ---------------------------------------------------------------------------
+
+- name: Uzaifa Mustapha Adam
+  github: UZZY7984
+  institution: Universiti Teknologi Malaysia
+  interests: Sequence Alaignment, Mutagenesis, Docking and Stimulations
+  role: Research Student
+  location: Jos, Nigeria
+  joined: 2026-11-18
+
 - name: Umar Ahmad
   github: babasaraki
   institution: Institute of Genomics, Africa CDC
@@ -39,6 +48,7 @@
   website: https://africacdc.org
   twitter: babasaraky
   joined: 2016-01-01
+
 # --- Copy the block below, fill it in, and delete the leading "# " ----------
 # - name: Your Name
 #   github: your-github-username
