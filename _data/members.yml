@@ -41,17 +41,16 @@
   twitter: babasaraky
   joined: 2016-01-01
 
-- name: Rebecca O. Joseph
-  github: rebeccajoseph460-gene
-  institution: Independent
-  interests: RNA-Seq, Transcriptomics, Genomics, Bioinformatics, Plant Genomics, Functional Genomics, Nextflow, R Programming
-  stage: Other
-  about: I am interested in applying genomics and bioinformatics to agriculture and nutrition. I currently explore RNA-Seq and transcriptomic data analysis in crops and want to develop skills in workflow management with Nextflow, reproducible research, and functional genomics.
-  role: Biochemistry Graduate | Genomics & Bioinformatics Analyst
-  location: Abuja, Nigeria
-  email: rebeccajoseph460@gmail.com
-  website: https://github.com//rebeccajoseph460-gene
-  linkedin: jores
+- name: Ganiyu Halima
+  github: GANIYUHALIMATU52
+  institution: University of Agriculture Makurdi
+  interests: Genomics
+  stage: MSc student
+  about: I want to learn more about genomics and how better I can represent it
+  role: Miss
+  location: Abuja
+  email: halimaoladunni@gmail.com
+  linkedin: halimatu-ganiyu
   joined: 2026-11-19
 
 - name: Ibrahim Mohammed
