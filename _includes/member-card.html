@@ -10,9 +10,10 @@
   <div class="member-body">
     <h3><a href="https://github.com/{{ m.github }}">{{ m.name }}</a></h3>
     {% if m.role %}<p class="role">{{ m.role }}</p>{% endif %}
-    {% if m.stage %}<p class="stage">{{ m.stage }}</p>{% endif %}
+    {% if m.title or m.stage %}
+      <p class="stage">{{ m.title }}{% if m.title and m.stage %} &middot; {% endif %}{{ m.stage }}</p>
+    {% endif %}
     <p class="institution">{{ m.institution }}{% if m.location %} &middot; {{ m.location }}{% endif %}</p>
-    {% if m.about %}<p class="about">{{ m.about }}</p>{% endif %}
     {% if m.interests %}
       <ul class="interests">
         {% assign tags = m.interests | split: "," %}

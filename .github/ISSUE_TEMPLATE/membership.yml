@@ -29,14 +29,43 @@ body:
       placeholder: Bayero University, Kano
     validations:
       required: true
-  - type: input
+  - type: dropdown
     id: interests
     attributes:
       label: Interests
-      description: Comma-separated. Research areas, techniques, languages you use or want to learn.
-      placeholder: RNA-Seq, metagenomics, AMR surveillance, R
+      description: Pick everything that applies. Up to eight are shown on your card.
+      multiple: true
+      options:
+        - Genomics
+        - Transcriptomics / RNA-Seq
+        - Single-cell analysis
+        - Metagenomics / microbiome
+        - Pathogen genomics / genomic surveillance
+        - Antimicrobial resistance (AMR)
+        - Cancer genomics
+        - Population and evolutionary genetics
+        - Variant analysis / WGS / WES
+        - Structural bioinformatics / molecular docking
+        - Drug discovery / cheminformatics
+        - Systems biology / pathways and networks
+        - Machine learning / AI in biology
+        - Statistics and data visualisation
+        - Workflows (Nextflow / Snakemake / Galaxy)
+        - Programming (R / Python / Unix)
+        - Databases and data management
+        - Plant and agricultural genomics
+        - Veterinary and animal genomics
+        - Clinical bioinformatics
+        - Science communication and training
+        - Open science and reproducibility
     validations:
       required: true
+  - type: input
+    id: other_interests
+    attributes:
+      label: Other interests
+      description: Anything not in the list above. Comma-separated.
+      placeholder: Nanopore sequencing, phylogenetics
   - type: dropdown
     id: career_stage
     attributes:
@@ -54,19 +83,33 @@ body:
         - Other
     validations:
       required: true
-  - type: textarea
-    id: about
+  - type: dropdown
+    id: title
     attributes:
-      label: What do you work on, or what do you want to learn?
-      description: One or two sentences, in your own words. This appears on your card.
-      placeholder: I analyse RNA-Seq data from cassava under drought stress, and I want to learn Nextflow.
-    validations:
-      required: true
-  - type: input
-    id: role
-    attributes:
-      label: Role or title
-      placeholder: PhD student / Lecturer / Research assistant
+      label: Job title
+      description: >-
+        Optional. Your position at your institution. Roles within the Bioinformatics Hub
+        itself are assigned by the steering committee, not chosen here.
+      options:
+        - Research assistant
+        - Research fellow
+        - Research scientist
+        - Bioinformatician
+        - Data analyst
+        - Laboratory scientist
+        - Clinician / Medical doctor
+        - Veterinarian
+        - Graduate assistant
+        - Assistant Lecturer
+        - Lecturer
+        - Senior Lecturer
+        - Reader / Associate Professor
+        - Professor
+        - Head of department / Unit lead
+        - Software engineer
+        - Industry professional
+        - Independent researcher
+        - Other
   - type: input
     id: location
     attributes:

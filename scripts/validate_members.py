@@ -12,14 +12,14 @@ import sys
 import yaml
 
 MEMBERS_FILE = "_data/members.yml"
-REQUIRED = ["name", "github", "institution", "interests", "stage", "about"]
+REQUIRED = ["name", "github", "institution", "interests", "stage"]
 ESTABLISHED = {
     "PhD holder", "Postdoctoral researcher", "Faculty / Principal investigator",
     "Research scientist (institute or industry)",
 }
 STAGES = ESTABLISHED | {"Undergraduate student", "MSc student", "MSc holder", "PhD student", "Other"}
 ALLOWED = set(REQUIRED) | {
-    "team", "role", "location", "email", "website", "orcid", "about", "stage",
+    "team", "role", "title", "location", "email", "website", "orcid", "about", "stage",
     "twitter", "linkedin", "bluesky", "mastodon", "joined",
 }
 PATTERNS = {
@@ -53,7 +53,7 @@ def main() -> int:
 
         legacy = not m.get("stage")      # predates the career-stage field
         for field in REQUIRED:
-            if field in ("stage", "about") and legacy:
+            if field == "stage" and legacy:
                 continue
             if not str(m.get(field, "")).strip():
                 problems.append(f"{where}: missing required field '{field}'.")
@@ -63,6 +63,10 @@ def main() -> int:
             value = m.get(field)
             if value not in (None, "") and not re.fullmatch(pattern, str(value)):
                 problems.append(f"{where}: '{field}' value {value!r} does not look right.")
+
+        if str(m.get("role", "")).strip() and m.get("team") != "steering":
+            problems.append(f"{where}: 'role' describes a position in the hub and is only for "
+                            "steering committee members. Use 'title' for a job title.")
 
         stage = m.get("stage")
         if stage and stage not in STAGES:

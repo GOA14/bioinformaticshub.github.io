@@ -33,9 +33,9 @@ LABEL_TO_FIELD = {
     "full name": "name",
     "institution": "institution",
     "interests": "interests",
-    "role or title": "role",
+    "other interests": "other_interests",
+    "job title": "title",
     "career stage": "stage",
-    "what do you work on, or what do you want to learn?": "about",
     "location": "location",
     "public email address": "email",
     "website": "website",
@@ -49,10 +49,10 @@ LABEL_TO_FIELD = {
 
 # Order fields are written in, so diffs stay readable.
 FIELD_ORDER = [
-    "name", "github", "institution", "interests", "stage", "about", "team", "role", "location",
+    "name", "github", "institution", "interests", "stage", "team", "role", "title", "location",
     "email", "website", "orcid", "twitter", "linkedin", "bluesky", "mastodon", "joined",
 ]
-REQUIRED = ["name", "github", "institution", "interests", "stage", "about"]
+REQUIRED = ["name", "github", "institution", "interests", "stage"]
 
 # Stages whose holders must supply an ORCID iD.
 ESTABLISHED = {
@@ -60,8 +60,8 @@ ESTABLISHED = {
     "Research scientist (institute or industry)",
 }
 STAGES = ESTABLISHED | {"Undergraduate student", "MSc student", "MSc holder", "PhD student", "Other"}
-MAX_LEN = {"name": 80, "institution": 120, "interests": 240, "role": 80, "location": 80,
-           "stage": 60, "about": 320}
+MAX_LEN = {"name": 80, "institution": 120, "interests": 400, "title": 80, "location": 80,
+           "stage": 60, "other_interests": 120}
 
 NO_RESPONSE = {"", "_no response_", "none", "n/a", "na", "-"}
 
@@ -117,9 +117,7 @@ def validated(field: str, value: str) -> str | None:
 
     if field == "stage":
         return value if value in STAGES else None
-    if field == "about":
-        return value
-    if field == "interests":
+    if field in ("interests", "other_interests"):
         parts = [p.strip() for p in re.split(r"[;,]", value) if p.strip()]
         return ", ".join(parts[:8]) or None
     if field == "email":
@@ -183,6 +181,15 @@ def main() -> None:
         cleaned = validated(field, value)
         if cleaned:
             entry[field] = cleaned
+
+    extra = entry.pop("other_interests", None)
+    if extra:
+        merged = [i.strip() for i in (entry.get("interests", "") + ", " + extra).split(",") if i.strip()]
+        seen, uniq = set(), []
+        for i in merged:
+            if i.lower() not in seen:
+                seen.add(i.lower()); uniq.append(i)
+        entry["interests"] = ", ".join(uniq[:8])
 
     missing = [f for f in REQUIRED if not entry.get(f)]
     if missing:
