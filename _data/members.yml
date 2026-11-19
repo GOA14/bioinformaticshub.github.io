@@ -62,35 +62,16 @@
   email: Ibrahimmohammed22398@gmail.com
   joined: 2026-11-18
 
-- name: Ubah Ngozichukwuka
-  github: Ngozi148
-  institution: University Of Lagos
-  interests: Genomics, biopython
-  stage: Undergraduate student
-  about: I retrieve sequence data from NCBI and analyze it using Biopython. I'm interested in growing my skills in genomics and sequence analysis
-  role: Undergraduate
-  location: Lagos, Nigeria
-  linkedin: ngozichukwuka-ubah
-  
-- name: R.A. Oluokun
-  github: Ronke1-dev
-  institution: Kwara State University Malete Nigeria
-  interests: RNA-Sequencing, Metagenomics, Metabolomic, Genomics and R
-  stage: PhD student
-  about: I work on protein ligand interactions using plant based bioactives to target important proteins implicated in schizophrenia.
-  role: PhD student
-  location: Kwara State
-  orcid: 0009-0006-2666-8430
+- name: Michael Chidebelu Ugwueze
+  github: Mickomick
+  institution: Bells University Of Technology, otta
+  interests: Bioinformatics, Computing Biology, English
+  stage: MSc holder
+  about: I analyze drug safety information in the pharmacovigilance department of the pharmaceutical company where I work, i want to learn computational biology using bioinformatics
+  role: Lecturer
+  location: Ogun State
+  email: micittechnology@gmail.com
   joined: 2026-11-19
-
-- name: Uche Ugochukwu Victory
-  github: victoryugochukwu18-cyber
-  institution: University of Calabar, Calabar
-  interests: Cheminformatics and bioinformatics
-  role: Students
-  location: Anambra
-  email: victoryugochukwu18@gmail.com
-  joined: 2026-11-18
 
 # --- Copy the block below, fill it in, and delete the leading "# " ----------
 # - name: Your Name
