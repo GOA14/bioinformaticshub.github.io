@@ -1,0 +1,86 @@
+# ---------------------------------------------------------------------------
+# Institutional email domains accepted by the Slack workspace.
+# Names were expanded from the domain list on the original README -- please
+# check each one and correct any that are wrong. To add an institution, append
+# an entry here and open a pull request; it appears on the /join/ page.
+# ---------------------------------------------------------------------------
+- domain: sazu.edu.ng
+  name: Sa'adu Zungur University, Bauchi State (formerly Bauchi State University, Gadau)
+- domain: basug.edu.ng
+  name: Sa'adu Zungur University (legacy domain, for addresses issued before the renaming)
+- domain: abu.edu.ng
+  name: Ahmadu Bello University, Zaria
+- domain: buk.edu.ng
+  name: Bayero University, Kano
+- domain: gsu.edu.ng
+  name: Gombe State University
+- domain: atbu.edu.ng
+  name: Abubakar Tafawa Balewa University, Bauchi
+- domain: udusok.edu.ng
+  name: Usmanu Danfodiyo University, Sokoto
+- domain: mautech.edu.ng
+  name: Modibbo Adama University, Yola
+- domain: aun.edu.ng
+  name: American University of Nigeria, Yola
+- domain: adsu.edu.ng
+  name: Adamawa State University, Mubi
+- domain: ysu.edu.ng
+  name: Yobe State University, Damaturu
+- domain: ksu.edu.ng
+  name: Kogi State University, Anyigba
+- domain: fud.edu.ng
+  name: Federal University Dutse
+- domain: slu.edu.ng
+  name: Sule Lamido University, Kafin Hausa
+- domain: nwu.edu.ng
+  name: Northwest University, Kano
+- domain: umyu.edu.ng
+  name: Umaru Musa Yar'adua University, Katsina
+- domain: fudutsinma.edu.ng
+  name: Federal University Dutsin-Ma
+- domain: kustwudil.edu.ng
+  name: Kano University of Science and Technology, Wudil
+- domain: unimaid.edu.ng
+  name: University of Maiduguri
+- domain: naub.edu.ng
+  name: Nigerian Army University, Biu
+- domain: nda.edu.ng
+  name: Nigerian Defence Academy, Kaduna
+- domain: alhikmah.edu.ng
+  name: Al-Hikmah University, Ilorin
+- domain: uniilorin.edu.ng
+  name: University of Ilorin
+- domain: nileuniversity.edu.ng
+  name: Nile University of Nigeria, Abuja
+- domain: uniabuja.edu.ng
+  name: University of Abuja
+- domain: bazeuniversity.edu.ng
+  name: Baze University, Abuja
+- domain: tsuniversity.edu.ng
+  name: Taraba State University, Jalingo
+- domain: kwasu.edu.ng
+  name: Kwara State University, Malete
+- domain: fukashere.edu.ng
+  name: Federal University of Kashere, Gombe
+- domain: fulafia.edu.ng
+  name: Federal University of Lafia
+- domain: unijos.edu.ng
+  name: University of Jos
+- domain: nsuk.edu.ng
+  name: Nasarawa State University, Keffi
+- domain: uniport.edu.ng
+  name: University of Port Harcourt
+- domain: nabda.gov.ng
+  name: National Biotechnology Research and Development Agency (NABDA)
+- domain: tetfund.gov.ng
+  name: Tertiary Education Trust Fund (TETFund)
+- domain: nuc.edu.ng
+  name: National Universities Commission (NUC)
+- domain: nvri.gov.ng
+  name: National Veterinary Research Institute, Vom
+- domain: nimr.gov.ng
+  name: Nigerian Institute of Medical Research, Lagos
+- domain: ncdc.gov.ng
+  name: Nigeria Centre for Disease Control and Prevention (NCDC)
+- domain: 54gene.com
+  name: 54gene
