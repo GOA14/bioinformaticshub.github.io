@@ -41,16 +41,15 @@
   twitter: babasaraky
   joined: 2016-01-01
 
-- name: Ganiyu Halima
-  github: GANIYUHALIMATU52
-  institution: University of Agriculture Makurdi
-  interests: Genomics
-  stage: MSc student
-  about: I want to learn more about genomics and how better I can represent it
-  role: Miss
-  location: Abuja
-  email: halimaoladunni@gmail.com
-  linkedin: halimatu-ganiyu
+- name: Moses Rundo Maciek
+  github: moses-rundo
+  institution: RAMAKRISHNA mission vivekananda centenary college
+  interests: Metagenomics, AMR surveillance
+  stage: Undergraduate student
+  about: I am interested in working in AMR surveillance, metagenomics, and other bioinformatics-related research, particularly in applying genomic data to understand infectious diseases and address public health challenges.
+  role: Final year Bsc student
+  location: India
+  email: mosesrundo@gmail.com
   joined: 2026-11-19
 
 - name: Ibrahim Mohammed
