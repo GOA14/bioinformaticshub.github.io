@@ -70,7 +70,13 @@ pathways and networks, structural biology, scientific programming, systems biolo
 computational genomics &mdash; all of it counts. Biologists, biomedical and medical
 scientists who are new to the field are especially welcome.
 
-## Eligible institutional email domains
+## Institutional email domains already enabled
+
+This is not a list of who is welcome &mdash; every Nigerian university, polytechnic and
+research institute is. It is simply the set of domains switched on in the Slack workspace
+so far. Adding one takes a maintainer about a minute, so if yours is missing,
+[tell us](https://github.com/{{ site.repository }}/issues/new) and we will enable it.
+Renamed institutions and new domains are added the same way.
 
 <ul class="domains">
 {% for i in site.data.institutions %}

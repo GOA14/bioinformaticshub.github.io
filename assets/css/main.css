@@ -122,3 +122,6 @@ img{max-width:100%;height:auto}
 
 /* brand mark in the header keeps its own aspect ratio */
 .brand img{display:block;width:38px;height:38px;object-fit:contain}
+
+.member-card .stage{margin:.1rem 0 0;font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.member-card .about{margin:.4rem 0 .5rem;font-size:.88rem;color:var(--ink);opacity:.85}

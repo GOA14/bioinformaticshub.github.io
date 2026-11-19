@@ -34,6 +34,8 @@ LABEL_TO_FIELD = {
     "institution": "institution",
     "interests": "interests",
     "role or title": "role",
+    "career stage": "stage",
+    "what do you work on, or what do you want to learn?": "about",
     "location": "location",
     "public email address": "email",
     "website": "website",
@@ -47,11 +49,19 @@ LABEL_TO_FIELD = {
 
 # Order fields are written in, so diffs stay readable.
 FIELD_ORDER = [
-    "name", "github", "institution", "interests", "team", "role", "location",
+    "name", "github", "institution", "interests", "stage", "about", "team", "role", "location",
     "email", "website", "orcid", "twitter", "linkedin", "bluesky", "mastodon", "joined",
 ]
-REQUIRED = ["name", "github", "institution", "interests"]
-MAX_LEN = {"name": 80, "institution": 120, "interests": 240, "role": 80, "location": 80}
+REQUIRED = ["name", "github", "institution", "interests", "stage", "about"]
+
+# Stages whose holders must supply an ORCID iD.
+ESTABLISHED = {
+    "PhD holder", "Postdoctoral researcher", "Faculty / Principal investigator",
+    "Research scientist (institute or industry)",
+}
+STAGES = ESTABLISHED | {"Undergraduate student", "MSc student", "MSc holder", "PhD student", "Other"}
+MAX_LEN = {"name": 80, "institution": 120, "interests": 240, "role": 80, "location": 80,
+           "stage": 60, "about": 320}
 
 NO_RESPONSE = {"", "_no response_", "none", "n/a", "na", "-"}
 
@@ -105,6 +115,10 @@ def validated(field: str, value: str) -> str | None:
     if len(value) > limit:
         value = value[:limit].rstrip() + "..."
 
+    if field == "stage":
+        return value if value in STAGES else None
+    if field == "about":
+        return value
     if field == "interests":
         parts = [p.strip() for p in re.split(r"[;,]", value) if p.strip()]
         return ", ".join(parts[:8]) or None
@@ -174,6 +188,11 @@ def main() -> None:
     if missing:
         fail("These required answers were missing or unreadable: " + ", ".join(missing)
              + ". Edit the issue to fill them in and the bot will try again.")
+
+    if entry.get("stage") in ESTABLISHED and not entry.get("orcid"):
+        fail(f"Members at the '{entry['stage']}' stage need an ORCID iD, so that the directory "
+             "can be verified. It is free and takes two minutes at https://orcid.org/register "
+             "-- add it to the issue above and the bot will try again.")
 
     text = open(MEMBERS_FILE, encoding="utf-8").read() if os.path.exists(MEMBERS_FILE) else ""
     members = yaml.safe_load(text) or []

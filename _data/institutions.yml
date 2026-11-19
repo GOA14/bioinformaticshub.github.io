@@ -4,8 +4,10 @@
 # check each one and correct any that are wrong. To add an institution, append
 # an entry here and open a pull request; it appears on the /join/ page.
 # ---------------------------------------------------------------------------
+- domain: sazu.edu.ng
+  name: Sa'adu Zungur University, Bauchi State (formerly Bauchi State University, Gadau)
 - domain: basug.edu.ng
-  name: Bauchi State University, Gadau
+  name: Sa'adu Zungur University (legacy domain, for addresses issued before the renaming)
 - domain: abu.edu.ng
   name: Ahmadu Bello University, Zaria
 - domain: buk.edu.ng

@@ -12,9 +12,14 @@ import sys
 import yaml
 
 MEMBERS_FILE = "_data/members.yml"
-REQUIRED = ["name", "github", "institution", "interests"]
+REQUIRED = ["name", "github", "institution", "interests", "stage", "about"]
+ESTABLISHED = {
+    "PhD holder", "Postdoctoral researcher", "Faculty / Principal investigator",
+    "Research scientist (institute or industry)",
+}
+STAGES = ESTABLISHED | {"Undergraduate student", "MSc student", "MSc holder", "PhD student", "Other"}
 ALLOWED = set(REQUIRED) | {
-    "team", "role", "location", "email", "website", "orcid",
+    "team", "role", "location", "email", "website", "orcid", "about", "stage",
     "twitter", "linkedin", "bluesky", "mastodon", "joined",
 }
 PATTERNS = {
@@ -46,7 +51,10 @@ def main() -> int:
             continue
         where = f"entry {i} ({m.get('name') or m.get('github') or 'unnamed'})"
 
+        legacy = not m.get("stage")      # predates the career-stage field
         for field in REQUIRED:
+            if field in ("stage", "about") and legacy:
+                continue
             if not str(m.get(field, "")).strip():
                 problems.append(f"{where}: missing required field '{field}'.")
         for field in set(m) - ALLOWED:
@@ -55,6 +63,12 @@ def main() -> int:
             value = m.get(field)
             if value not in (None, "") and not re.fullmatch(pattern, str(value)):
                 problems.append(f"{where}: '{field}' value {value!r} does not look right.")
+
+        stage = m.get("stage")
+        if stage and stage not in STAGES:
+            problems.append(f"{where}: unknown career stage {stage!r}. One of: {', '.join(sorted(STAGES))}.")
+        if stage in ESTABLISHED and not str(m.get("orcid", "")).strip():
+            problems.append(f"{where}: stage '{stage}' requires an ORCID iD.")
 
         login = str(m.get("github", "")).lower()
         if login:

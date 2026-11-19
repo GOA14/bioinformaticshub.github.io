@@ -37,6 +37,31 @@ body:
       placeholder: RNA-Seq, metagenomics, AMR surveillance, R
     validations:
       required: true
+  - type: dropdown
+    id: career_stage
+    attributes:
+      label: Career stage
+      description: Used to group the members page. Everyone is welcome at any stage.
+      options:
+        - Undergraduate student
+        - MSc student
+        - MSc holder
+        - PhD student
+        - PhD holder
+        - Postdoctoral researcher
+        - Faculty / Principal investigator
+        - Research scientist (institute or industry)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: What do you work on, or what do you want to learn?
+      description: One or two sentences, in your own words. This appears on your card.
+      placeholder: I analyse RNA-Seq data from cassava under drought stress, and I want to learn Nextflow.
+    validations:
+      required: true
   - type: input
     id: role
     attributes:
@@ -63,7 +88,9 @@ body:
     id: orcid
     attributes:
       label: ORCID iD
-      description: Digits only, e.g. 0000-0002-1825-0097
+      description: >-
+        Digits only, e.g. 0000-0002-1825-0097. Required if you selected PhD holder,
+        postdoc, faculty or research scientist. Free to create at orcid.org.
       placeholder: 0000-0002-1825-0097
   - type: input
     id: twitter
@@ -87,16 +114,6 @@ body:
     attributes:
       label: Mastodon profile URL
       placeholder: https://mstdn.science/@you
-  - type: dropdown
-    id: newcomer
-    attributes:
-      label: How would you describe yourself?
-      description: Only used to help us plan training. Not published.
-      options:
-        - New to bioinformatics
-        - Some experience
-        - Experienced bioinformatician
-        - Prefer not to say
   - type: checkboxes
     id: conduct
     attributes:
