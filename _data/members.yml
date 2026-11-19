@@ -72,6 +72,16 @@
   role: Undergraduate
   location: Lagos, Nigeria
   linkedin: ngozichukwuka-ubah
+  
+- name: R.A. Oluokun
+  github: Ronke1-dev
+  institution: Kwara State University Malete Nigeria
+  interests: RNA-Sequencing, Metagenomics, Metabolomic, Genomics and R
+  stage: PhD student
+  about: I work on protein ligand interactions using plant based bioactives to target important proteins implicated in schizophrenia.
+  role: PhD student
+  location: Kwara State
+  orcid: 0009-0006-2666-8430
   joined: 2026-11-19
 
 - name: Uche Ugochukwu Victory
