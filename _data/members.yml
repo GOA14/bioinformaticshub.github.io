@@ -63,6 +63,16 @@
   email: Ibrahimmohammed22398@gmail.com
   joined: 2026-11-18
 
+- name: Ubah Ngozichukwuka
+  github: Ngozi148
+  institution: University Of Lagos
+  interests: Genomics, biopython
+  stage: Undergraduate student
+  about: I retrieve sequence data from NCBI and analyze it using Biopython. I'm interested in growing my skills in genomics and sequence analysis
+  role: Undergraduate
+  location: Lagos, Nigeria
+  linkedin: ngozichukwuka-ubah
+  
 - name: R.A. Oluokun
   github: Ronke1-dev
   institution: Kwara State University Malete Nigeria
