@@ -41,16 +41,29 @@
   twitter: babasaraky
   joined: 2016-01-01
 
+- name: Grace Ajayi
+  github: Torren11
+  institution: Afe Babalola University
+  interests: Genomics
+  stage: MSc student
+  title: Research assistant
+  location: Ekiti, Nigeria
+  email: oluwasolagraceajayi@gmail.com
+  orcid: 0000-0002-6845-6018
+  twitter: Gracy_ldn
+  linkedin: graceoluwasola
+  joined: 2026-11-19
+
 - name: Moses Rundo Maciek
   github: moses-rundo
   institution: RAMAKRISHNA mission vivekananda centenary college
   interests: Metagenomics, AMR surveillance
   stage: Undergraduate student
-  about: I am interested in working in AMR surveillance, metagenomics, and other bioinformatics-related research, particularly in applying genomic data to understand infectious diseases and address public health challenges.
   title: Final year Bsc student
   location: India
   email: mosesrundo@gmail.com
   joined: 2026-11-19
+  about: I am interested in working in AMR surveillance, metagenomics, and other bioinformatics-related research, particularly in applying genomic data to understand infectious diseases and address public health challenges.
 
 - name: Ibrahim Mohammed
   github: ibrahimmohammed22398-hash
@@ -66,11 +79,11 @@
   institution: Bells University Of Technology, otta
   interests: Bioinformatics, Computing Biology, English
   stage: MSc holder
-  about: I analyze drug safety information in the pharmacovigilance department of the pharmaceutical company where I work, i want to learn computational biology using bioinformatics
   title: Lecturer
   location: Ogun State
   email: micittechnology@gmail.com
   joined: 2026-11-19
+  about: I analyze drug safety information in the pharmacovigilance department of the pharmaceutical company where I work, i want to learn computational biology using bioinformatics
 
 # --- Copy the block below, fill it in, and delete the leading "# " ----------
 # - name: Your Name
