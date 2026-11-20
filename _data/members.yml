@@ -41,18 +41,15 @@
   twitter: babasaraky
   joined: 2016-01-01
 
-- name: Grace Ajayi
-  github: Torren11
-  institution: Afe Babalola University
-  interests: Genomics
-  stage: MSc student
-  title: Research assistant
-  location: Ekiti, Nigeria
-  email: oluwasolagraceajayi@gmail.com
-  orcid: 0000-0002-6845-6018
-  twitter: Gracy_ldn
-  linkedin: graceoluwasola
-  joined: 2026-11-19
+- name: Ojo Clement
+  github: Clement-Ojo
+  institution: University of Ibadan
+  interests: Vaccine design, Phylogenetics, Metagenomics
+  stage: Undergraduate student
+  location: Ibadan, Oyo state
+  email: cojo445@stu.ui.edu.ng
+  linkedin: clement-oj
+  joined: 2026-11-20
 
 - name: Moses Rundo Maciek
   github: moses-rundo
