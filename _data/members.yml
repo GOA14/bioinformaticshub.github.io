@@ -94,6 +94,17 @@
   joined: 2026-11-19
   about: I analyze drug safety information in the pharmacovigilance department of the pharmaceutical company where I work, i want to learn computational biology using bioinformatics
 
+ - name: Grace Adeloye
+   github: GOA14
+   institution: Redeemers University
+   interests: RNA-Seq, metagenomics, R, Pathogen genomics, genomic surveillance, Genomics, Metagenomics, microbiome, Population and evolutionary genetics, Statistics and data visualisation, Open science and reproducibility
+   stage: MSc holder in Bioinformatics
+   title: Bioinformatician
+   location: Osun, Nigeria
+   email: adeloye6979@run.edu.ng
+   orcid: 0009-0006-1110-7067
+   joined: 2026-11-24
+   
 # --- Copy the block below, fill it in, and delete the leading "# " ----------
 # - name: Your Name
 #   github: your-github-username
